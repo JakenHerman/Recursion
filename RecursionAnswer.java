@@ -114,6 +114,7 @@ public class RecursionAnswer {
 	} // end writeBackward
 
 
+
 	public static void writeBackward(String s, int size)
 	{
 		if (size > 0){
@@ -262,9 +263,9 @@ public static void writeBackward(String s, int size)
 		int[] array = new int[n+1];
 		array[0] = 1;
 		array[1] = 1;
-		for (int i = 2; i <= n; i++)
+		for (int i = 2; i <= n; i++){
 			// 1 line(?)
-
+    }
 
 		// 1 line(?) return(???)
 	}
@@ -328,7 +329,11 @@ public static void writeBackward(String s, int size)
 		System.out.println("\tfact1(" + n + ") = " + fact1(n));
 		System.out.println("\tfact2(" + n + ") = " + fact2(n));
 
-		// Add your codes for the remaining methods
+		System.out.println("Test WriteBackward(String str, int size):");
+		System.out.println(writeBackword1("Jaken Herman", 9);
+		//	writeBackword2("Your name", 9) = eman ruoY
+		//	writeBackword3("Your name", 9) = eman ruoY
+		//	writeBackword4("Your name", 9) = eman ruoY
 
 
 	} // end of main()
