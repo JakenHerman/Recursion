@@ -80,15 +80,16 @@ public class RecursionAnswer {
 		int result = 1;
 		if (n == 0)
 		{
-			return 1; // do nothing (i.e. result = 1)
+			return result; // do nothing (i.e. result = 1)
 		}
+
 		else
 		{
 			for (int i = 2; i <= n; i++){
 				 result *= i;
-				 return result;
 			} //end for
 		} //end else
+		return result;
 	}
 
 	// --------------------------------------------------------
@@ -120,7 +121,7 @@ public class RecursionAnswer {
 	public static void writeBackward1(String s, int size)
 	{
 		if (size > 0){
-			System.out.println(s.substring(size-1, size));
+			System.out.print(s.substring(size-1, size));
 			writeBackward(s, size - 1);
 		}
 	}
@@ -129,7 +130,7 @@ public class RecursionAnswer {
 	public static void writeBackward2(String s, int size)
 	{
 		while (size > 0){
-			System.out.println(s.substring(size-1, size));
+			System.out.print(s.substring(size-1, size));
 			--size;
 		}
 	}
@@ -150,9 +151,6 @@ public static void writeBackward4(String s, int size)
 			System.out.print(s.charAt(i));
 		System.out.println();
 	}
-
-
-
 
 	//------------------------------------------------------
 	// Evaluate the sum of the first n integers
@@ -184,10 +182,6 @@ public static void writeBackward4(String s, int size)
 		return result;
 	}
 
-
-
-
-
 	//---------------------------------------------------
 	// Evaluate the sum of the integers in a given range
 	//	(i.e., from start to end)
@@ -210,11 +204,7 @@ public static void writeBackward4(String s, int size)
 			sum += array[i];
 		return sum;
 	}
-
-
-
-
-
+/*
 	//---------------------------------------------------
 	// fib(n) = 0						if n == 0
 	// fib(n) = 1						if n == 1
@@ -317,7 +307,7 @@ public static void writeBackward4(String s, int size)
 		}
 
 	}
-
+*/
 	public static void main(String [] args)
 	{
 		String str = new String("Jaken Herman");
@@ -334,17 +324,26 @@ public static void writeBackward4(String s, int size)
 
 		System.out.println("Test WriteBackward(String str, int size):");
 
-		System.out.println("writeBackward("+str+"), 9) = ");
+		System.out.print("\twriteBackward("+str+",9)= ");
 		writeBackward(str, 9);
-		//System.out.println("writeBackward1(\"Jaken Herman\", 9) = ") + writeBackward1("Jaken Herman", 9);
-		//System.out.println("writeBackward2(\"Jaken Herman\", 9) = ") + writeBackward2("Jaken Herman", 9);
-		//System.out.println("writeBackward3(\"Jaken Herman\", 9) = ") + writeBackward3("Jaken Herman", 9);
-		//System.out.println("writeBackward4(\"Jaken Herman\", 9) = ") + writeBackward4("Jaken Herman", 9);
-
-
-		//	writeBackword3("Your name", 9) = eman ruoY
-		//	writeBackword4("Your name", 9) = eman ruoY
-
+		System.out.println();
+		System.out.println("\twriteBackward1(\"Jaken Herman\",9)= ");
+		writeBackward1(str, 9);
+		System.out.println();
+		System.out.println("\twriteBackward2(\"Jaken Herman\",9)= ");
+		writeBackward2(str, 9);
+		System.out.println();
+		System.out.println("\twriteBackward3(\"Jaken Herman\",9)= ");
+		writeBackward3(str);
+		System.out.println("\twriteBackward4(\"Jaken Herman\",9)= ");
+		writeBackward4(str, 9);
+		System.out.println();
+		System.out.println("Test sum(int n):");
+		System.out.println("\tsum1(10) = " + sum1(10));
+		System.out.println("\tsum2(10) = " + sum2(10));
+		System.out.println("Test rangeSum(int array, int m, int e):");
+		System.out.println("\trangeSum1(array, m, e) = " + rangeSum1(array, m, e));
+		System.out.println("\trangeSum2(array, m, e) = " + rangeSum2(array, m, e));
 
 	} // end of main()
 
