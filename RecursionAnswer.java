@@ -103,7 +103,9 @@ public class RecursionAnswer {
 	public static void writeBackward(String s, int size)
 	{  // base case
 		if(size == 1)
+		{
 			System.out.print(s.charAt(0));
+	    }
 		// else, write rest of string
 		else if (size > 1)
 		{
@@ -115,7 +117,7 @@ public class RecursionAnswer {
 
 
 
-	public static void writeBackward(String s, int size)
+	public static void writeBackward1(String s, int size)
 	{
 		if (size > 0){
 			System.out.println(s.substring(size-1, size));
@@ -124,7 +126,7 @@ public class RecursionAnswer {
 	}
 
 
-	public static void writeBackward(String s, int size)
+	public static void writeBackward2(String s, int size)
 	{
 		while (size > 0){
 			System.out.println(s.substring(size-1, size));
@@ -133,7 +135,7 @@ public class RecursionAnswer {
 	}
 
 
-	public static void writeBackward(String s)
+	public static void writeBackward3(String s)
 	{
 		for (int i = s.length()-1; i>= 0; i--)
 			System.out.print(s.charAt(i));
@@ -142,7 +144,7 @@ public class RecursionAnswer {
 
 
 
-public static void writeBackward(String s, int size)
+public static void writeBackward4(String s, int size)
 	{
 		for (int i = size-1; i>= 0; i--)
 			System.out.print(s.charAt(i));
@@ -177,7 +179,7 @@ public static void writeBackward(String s, int size)
 	public static int sum2(int n)
 	{
 		int result = 0;
-		for (i = 1; i <= n; i++)
+		for (int i = 1; i <= n; i++)
 			result += i;
 		return result;
 	}
@@ -197,7 +199,7 @@ public static void writeBackward(String s, int size)
 		if (start > end)
 			return 0;
 		else
-			return array[start] + rangeSum(array, start + 1, end);
+			return array[start] + rangeSum1(array, start + 1, end);
 	}
 
 
@@ -279,27 +281,27 @@ public static void writeBackward(String s, int size)
 
 		else if (n == 0)
 		{
-			acker(m-1, 1);
+			return acker(m-1, 1);
 		}
 		else
 		{
-			acker(m-1, acker(m, n-1));
+			return acker(m-1, acker(m, n-1));
 		}
 	}
 
 	public static int gcd(int a, int b)
 	{
-		if (a % b == 0)
+		if (a % b == 0){
 			return b;
-
-		else
-			gcd(b, a%b);
-
+	    }
+		else{
+			return gcd(b, (a % b));
+	    }
 	}
 
-	public static static int c(int n, int k)
+	public static int c(int n, int k)
 	{
-		if ((k == 0) || (k == n)
+		if ((k == 0) || (k == n))
 		{
 			return 1;
 		}
@@ -318,11 +320,12 @@ public static void writeBackward(String s, int size)
 
 	public static void main(String [] args)
 	{
-		String str = new String("Your name");
+		String str = new String("Jaken Herman");
 		int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		int m = 3;
 		int n = array.length;
 		int e = array.length - 1;
+
 
 
 		System.out.println("Test fact(int n):");
@@ -330,8 +333,15 @@ public static void writeBackward(String s, int size)
 		System.out.println("\tfact2(" + n + ") = " + fact2(n));
 
 		System.out.println("Test WriteBackward(String str, int size):");
-		System.out.println(writeBackword1("Jaken Herman", 9);
-		//	writeBackword2("Your name", 9) = eman ruoY
+
+		System.out.println("writeBackward("+str+"), 9) = ");
+		writeBackward(str, 9);
+		//System.out.println("writeBackward1(\"Jaken Herman\", 9) = ") + writeBackward1("Jaken Herman", 9);
+		//System.out.println("writeBackward2(\"Jaken Herman\", 9) = ") + writeBackward2("Jaken Herman", 9);
+		//System.out.println("writeBackward3(\"Jaken Herman\", 9) = ") + writeBackward3("Jaken Herman", 9);
+		//System.out.println("writeBackward4(\"Jaken Herman\", 9) = ") + writeBackward4("Jaken Herman", 9);
+
+
 		//	writeBackword3("Your name", 9) = eman ruoY
 		//	writeBackword4("Your name", 9) = eman ruoY
 
