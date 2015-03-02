@@ -19,44 +19,6 @@
 //    ==> public static void main(String []args)
 //    ==> Test what each method returns.
 
-//----------------
-// Running Example
-//----------------
-//Test fact(int n):
-//	fact1(10) = 3628800
-//	fact2(10) = 3628800
-//Test WriteBackward(String str, int size):
-//	writeBackword1("Your name", 9) = eman ruoY
-//	writeBackword2("Your name", 9) = eman ruoY
-//	writeBackword3("Your name", 9) = eman ruoY
-//	writeBackword4("Your name", 9) = eman ruoY
-//Test sum(int n):
-//	sum1(10) = 55
-//	sum2(10) = 55
-//Test rangeSum(int array, int m, int e)
-//	rangeSum1(array, m, e) = 49
-//	rangeSum2(array, m, e) = 49
-//Test fib(int n):
-//	fib1(1) = 1
-//	fib2(1) = 1
-//	fib3(1) = 1
-//	fib1(2) = 1
-//	fib2(2) = 1
-//	fib3(2) = 1
-//	fib1(10) = 55
-//	fib2(10) = 55
-//	fib3(10) = 55
-//Test acker(int m, int n):
-//	acker(0, 10) = 11
-//	acker(3, 0) = 5
-//	acker(3, 10) = 8189
-//Test gcd(m, n):
-//	gcd(3, 10) = 1
-//Test c(n, m):
-//	c(10, 3) = 120
-
-
-
 import java.util.Scanner;
 
 
@@ -230,7 +192,7 @@ public static void writeBackward4(String s, int size)
 
 
 	}
-
+    /*
 
 	public static int fib2(int n)
 	{
@@ -238,18 +200,18 @@ public static void writeBackward4(String s, int size)
 		int current = 1;
 		int next = 2;
 		if (n == 1 || n == 2)
+		    {
 			next = 1;
-
+		    } // end if
+		
 		for (int i = 3; i <= n; i++){
-			previous = current;
-			current = next;
-			next = previous + current;
+	  
 
-		}
+		} //end for
 		return next;
-	}
+	} //end fib2 method
 
-/*
+
 	public static int fib3(int n)
 	{
 		int[] array = new int[n+1];
@@ -257,12 +219,14 @@ public static void writeBackward4(String s, int size)
 		array[1] = 1;
 		for (int i = 2; i <= n; i++){
 			// 1 line(?)
-    }
+		} //end for
 
 		// 1 line(?) return(???)
-	}
+	} //end fib3
 
-	int acker(int m, int n)
+    */
+
+	public static int acker(int m, int n)
 	{
 		if (m == 0)
 		{
@@ -307,7 +271,7 @@ public static void writeBackward4(String s, int size)
 		}
 
 	}
-*/
+
 	public static void main(String [] args)
 	{
 		String str = new String("Jaken Herman");
@@ -346,14 +310,22 @@ public static void writeBackward4(String s, int size)
 		System.out.println("\trangeSum2(array, m, e) = " + rangeSum2(array, m, e));
 		System.out.println("Test fib(int n): ");
 		System.out.println("\tfib1(1) = "+fib1(1));
-		System.out.println("\tfib2(1) = "+fib2(1));
+		//System.out.println("\tfib2(1) = "+fib2(1));
 		// System.out.println("\tfib3(1) = "+fib3(1));
 		System.out.println("\tfib1(2) = "+fib1(2));
-		System.out.println("\tfib2(2) = "+fib2(2));
+		//System.out.println("\tfib2(2) = "+fib2(2));
 		// System.out.println("\tfib3(2) = "+fib3(2));
 		System.out.println("\tfib1(10) = "+fib1(n));
-		System.out.println("\tfib2(10) = "+fib2(n));
+		// System.out.println("\tfib2(10) = "+fib2(n));
 		// System.out.println("\tfib3(10) = "+fib3(n));
+		System.out.println("Test acker(int m, int n):");
+		System.out.println("\tacker(0, 10) = " + acker(0, 10));
+		System.out.println("\tacker(3, 0) = " + acker(3, 0));
+		System.out.println("\tacker(3, 10) = " + acker(3, 10));
+		System.out.println("Test gcd(m, n):");
+		System.out.println("\tgcd(3, 10) = " + gcd(3, 10));
+		System.out.println("Test c(n, m):");
+		System.out.println("\tc(10,3) = " + c(10, 3));
 	} // end of main()
 
 
