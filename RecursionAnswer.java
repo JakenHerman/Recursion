@@ -204,7 +204,7 @@ public static void writeBackward4(String s, int size)
 			sum += array[i];
 		return sum;
 	}
-/*
+
 	//---------------------------------------------------
 	// fib(n) = 0						if n == 0
 	// fib(n) = 1						if n == 1
@@ -241,15 +241,15 @@ public static void writeBackward4(String s, int size)
 			next = 1;
 
 		for (int i = 3; i <= n; i++){
-			// 3 lines (?)
-
-
+			previous = current;
+			current = next;
+			next = previous + current;
 
 		}
 		return next;
 	}
 
-
+/*
 	public static int fib3(int n)
 	{
 		int[] array = new int[n+1];
@@ -344,7 +344,16 @@ public static void writeBackward4(String s, int size)
 		System.out.println("Test rangeSum(int array, int m, int e):");
 		System.out.println("\trangeSum1(array, m, e) = " + rangeSum1(array, m, e));
 		System.out.println("\trangeSum2(array, m, e) = " + rangeSum2(array, m, e));
-
+		System.out.println("Test fib(int n): ");
+		System.out.println("\tfib1(1) = "+fib1(1));
+		System.out.println("\tfib2(1) = "+fib2(1));
+		// System.out.println("\tfib3(1) = "+fib3(1));
+		System.out.println("\tfib1(2) = "+fib1(2));
+		System.out.println("\tfib2(2) = "+fib2(2));
+		// System.out.println("\tfib3(2) = "+fib3(2));
+		System.out.println("\tfib1(10) = "+fib1(n));
+		System.out.println("\tfib2(10) = "+fib2(n));
+		// System.out.println("\tfib3(10) = "+fib3(n));
 	} // end of main()
 
 
