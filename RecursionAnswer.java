@@ -189,28 +189,29 @@ public static void writeBackward4(String s, int size)
 		{
 			return (fib1(n-1) + fib1(n-2));
 		}
+	}
 
+	public static int fib2(int n) //use iteration
+	{
+		int x = 1;
+		int y = 1;
+		int z = 2;
+
+		if (n == 1 || n == 2)
+		{
+			 return 1;
+		}
+
+		for (int i = 2; i <= n; i++)
+		{
+			x = y;
+			y = z;
+			z = x+y;
+		}
+
+		return x;
 
 	}
-    /*
-
-	public static int fib2(int n)
-	{
-		int previous = 1;
-		int current = 1;
-		int next = 2;
-		if (n == 1 || n == 2)
-		    {
-			next = 1;
-		    } // end if
-		
-		for (int i = 3; i <= n; i++){
-	  
-
-		} //end for
-		return next;
-	} //end fib2 method
-
 
 	public static int fib3(int n)
 	{
@@ -218,13 +219,11 @@ public static void writeBackward4(String s, int size)
 		array[0] = 1;
 		array[1] = 1;
 		for (int i = 2; i <= n; i++){
-			// 1 line(?)
-		} //end for
+			array[i]=array[i-1]+array[i-2];
+		}
+		return array[array.length - 2];
+	}
 
-		// 1 line(?) return(???)
-	} //end fib3
-
-    */
 
 	public static int acker(int m, int n)
 	{
@@ -310,14 +309,14 @@ public static void writeBackward4(String s, int size)
 		System.out.println("\trangeSum2(array, m, e) = " + rangeSum2(array, m, e));
 		System.out.println("Test fib(int n): ");
 		System.out.println("\tfib1(1) = "+fib1(1));
-		//System.out.println("\tfib2(1) = "+fib2(1));
-		// System.out.println("\tfib3(1) = "+fib3(1));
+		System.out.println("\tfib2(1) = "+fib2(1));
+		System.out.println("\tfib3(1) = "+fib3(1));
 		System.out.println("\tfib1(2) = "+fib1(2));
-		//System.out.println("\tfib2(2) = "+fib2(2));
-		// System.out.println("\tfib3(2) = "+fib3(2));
+		System.out.println("\tfib2(2) = "+fib2(2));
+		System.out.println("\tfib3(2) = "+fib3(2));
 		System.out.println("\tfib1(10) = "+fib1(n));
-		// System.out.println("\tfib2(10) = "+fib2(n));
-		// System.out.println("\tfib3(10) = "+fib3(n));
+	    System.out.println("\tfib2(10) = "+fib2(n));
+		System.out.println("\tfib3(10) = "+fib3(n));
 		System.out.println("Test acker(int m, int n):");
 		System.out.println("\tacker(0, 10) = " + acker(0, 10));
 		System.out.println("\tacker(3, 0) = " + acker(3, 0));
@@ -326,7 +325,7 @@ public static void writeBackward4(String s, int size)
 		System.out.println("\tgcd(3, 10) = " + gcd(3, 10));
 		System.out.println("Test c(n, m):");
 		System.out.println("\tc(10,3) = " + c(10, 3));
-	} // end of main()
+	}
 
 
-} // end of Recusion
+}
